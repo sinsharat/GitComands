@@ -1,0 +1,184 @@
+===============================GIT CONFIGURATIONS==============
+
+Git Config
+=============
+git config --global user.name "sinsharat"
+git config --global user.email sinsharat@gmail.com
+
+============================REPOSITORY CHECKOUT=============
+
+Create a new local repository
+================================
+git init
+
+Checkout a repository
+=======================
+git clone /path/to/repository
+
+Connect to a remote repository
+================================
+git remote add origin <server>
+
+List all connected repositories
+=================================
+git remote -v
+
+
+====================REPOSITORY BRANCHES=====================
+
+Create repository branch
+============================
+git checkout -b <branchname>
+
+Change repository branch
+=============================
+git checkout <branchname>
+
+List all branches for current repository and also list current branch
+=======================================================================
+git branch
+
+List all branches for current repository and also list current branch including remote branches
+================================================================================================
+git branch -a
+
+Add a remote repository
+=========================
+git remote add origin ssh://git@github.com/<username>/<repository-name>.git
+
+Add upstream for original repository
+========================================
+git remote add upstream <original-repository-name>.git
+
+Delete origin repository
+==========================
+git remote rm origin
+
+Set a repository branch to ssh
+=================================
+git remote set-url origin ssh://git@github.com/<username>/<repository-name>.git
+
+Delete a branch from repository
+=================================
+git branch -d <branchname>
+
+Push branch to remote repository
+==================================
+git push origin <branchname>
+
+Push all branches to remote repository
+========================================
+git push --all origin
+
+Delete a branch on remote repository
+======================================
+git push origin :<branchname>
+git push origin --delete <branchName>	
+
+==============================UPDATE REMOTE REPOSITORY=====================
+
+Fetch and merge changes on the remote server to the working directory
+======================================================================
+git pull
+
+To merge a different branch into active branch
+===============================================
+git merge <branchname>
+
+To merge a different branch into a target branch
+===============================================
+git merge <branch name> <target branch>
+
+View all the merge conflicts
+==============================
+git diff
+
+View the conflicts against the base file
+==========================================
+git diff --base <filename>
+
+Preview changes, before merging
+================================
+git diff <sourcebranch> <targetbranch>
+
+After manually resolving any conflicts, mark the changed file
+===============================================================
+git add <filename>
+
+
+==========================FILE AND REPOSITORY MANAGEMENT===================
+
+Add files to a repository
+============================
+git add <filename>
+git add *
+
+Commit files to a repository
+==============================
+git commit -m "Commit message"
+
+Commit all files added with git add
+=======================================
+git commit -a
+
+Commit files to a repository with a message
+============================================
+git commit -am "Commit message"
+
+Push commits to a repository
+==============================
+git push origin master
+
+Getting the list of added/modified/deleted files
+==================================================
+git status
+
+Stash changes in a dirty working directory
+=============================================
+git stash
+
+Remove all stash entries
+===========================
+git stash clear
+
+To rebase the changes from old branch to the new branch
+=========================================================
+git rebase <new branch> <branch to rebase>
+
+
+===================================UNDO LOCAL CHANGES========================
+
+Replace the changes in working branch with the last content in head while keeping the changes already added to the index, as well as new files.
+================================================================================================================================================
+git checkout -- <filename>
+
+To drop all local changes and commits, fetch the latest history from the server and point local master branch at it
+======================================================================================================================
+git reset --hard origin/master
+
+
+========================BRANCH TAGGING====================
+git tag 1.0.0 <commitID>
+
+To check commit log
+====================
+git log
+
+To check detailed commit log
+=============================
+git log --summary
+
+Push all tags to remote repository
+===================================
+git push --tags origin
+
+
+=======================================SEARCH================================
+
+To Search a particular word in the current repository
+=======================================================
+git grep "<word>"
+
+
+
+
