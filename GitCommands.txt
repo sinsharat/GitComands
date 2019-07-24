@@ -29,10 +29,16 @@ git checkout master
 git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME
 git push origin master
 
+Syncing a fork
+======================================================
+git fetch upstream
+git checkout master
+git merge upstream/master
+
 ====================REPOSITORY BRANCHES=====================
 
-Create repository branch
-============================
+Create and switch to repository branch
+=======================================
 git checkout -b <branchname>
 
 Change repository branch
